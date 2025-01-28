@@ -7,7 +7,7 @@ This repository focuses on analyzing and visualizing global power plant data, al
 ## Week 2 Progress
 
 ### Literature Review
-- **Created and uploaded** a [Literature Review](LiteratureReview.pdf) that explores *multi-country* research on energy consumption, emissions, and economic trends.
+- **Created and uploaded** a Literature Review that explores *multi-country* research on energy consumption, emissions, and economic trends.
 - Emphasized how **policy instruments** (e.g., carbon pricing, renewable incentives) shape national-level energy outcomes across various countries.
 - Highlighted **key methodologies** such as panel data approaches, co-integration, and difference-in-differences for policy impact evaluation.
 
