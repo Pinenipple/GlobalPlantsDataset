@@ -18,10 +18,11 @@ This repository focuses on analyzing and visualizing global power plant data, al
   3. The Global Power Plant Database
 - **Outlined steps** to incorporate both *quantitative* (e.g., subsidy levels) and *qualitative* (e.g., policy start dates) information into the analysis.
 
----
+
 
 Stay tuned for **data cleaning**, **exploratory analysis**, and initial **modeling** phases, building on insights from the literature review.
 
+---
 ## Week 4 Progress
 
 ### Overview
@@ -49,3 +50,4 @@ This week, I completed the **initial data collection** and **exploratory data an
 ### Additional Notes
 - **File Sizes**: The final merged dataset remains manageable (~under 100 MB), so it can be stored locally and visualized with Python libraries.
 - **Repository**: All `.ipynb` notebooks for EDA and final `.csv` merges are pushed to GitHub for version control.
+---
