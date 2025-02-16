@@ -21,3 +21,31 @@ This repository focuses on analyzing and visualizing global power plant data, al
 ---
 
 Stay tuned for **data cleaning**, **exploratory analysis**, and initial **modeling** phases, building on insights from the literature review.
+
+## Week 4 Progress
+
+### Overview
+This week, I completed the **initial data collection** and **exploratory data analysis (EDA)** steps:
+- Merged power plant data with socio-economic indicators (World Bank).
+- Calculated total renewables vs. fossil capacities.
+- Examined time-series trends for GDP, emissions, and energy use across top countries.
+
+### Key Achievements
+- **Cleaned & Merged**: Created a consolidated `country_capacity` table indicating renewable_ratio for ~167 countries.
+- **EDA Visualizations**:
+  1. **Bar Charts** for top 10 countries by power plant count, plus total capacity by fuel source.
+  2. **Pie Chart** showing global renewable vs. non-renewable share.
+  3. **Line Plots** demonstrating GDP trends over time for countries with high fossil vs. high renewables.
+  4. **Choropleth Map** (Plotly) indicating “Green Majority” vs. “Fuel Majority” countries.
+  ```
+  plot Green Majority” vs. “Fuel Majority
+  ```
+  ![Alt text](pics/map.png)
+
+### Next Steps
+- **Enhanced Correlation Analysis**: Investigate relationships between GDP, CO₂, and renewable share with regression or correlation tests.
+- **Improve Mapping**: Possibly create an animated map over different years if consistent time-series coverage is found.
+
+### Additional Notes
+- **File Sizes**: The final merged dataset remains manageable (~under 100 MB), so it can be stored locally and visualized with Python libraries.
+- **Repository**: All `.ipynb` notebooks for EDA and final `.csv` merges are pushed to GitHub for version control.
