@@ -35,14 +35,27 @@ This week, I completed the **initial data collection** and **exploratory data an
 - **Cleaned & Merged**: Created a consolidated `country_capacity` table indicating renewable_ratio for ~167 countries.
 - **EDA Visualizations**:
   1. **Bar Charts** for top 10 countries by power plant count, plus total capacity by fuel source.
-  2. **Pie Chart** showing global renewable vs. non-renewable share.
-  3. **Line Plots** demonstrating GDP trends over time for countries with high fossil vs. high renewables.
-  4. **Choropleth Map** (Plotly) indicating “Green Majority” vs. “Fuel Majority” countries.
-  ```
-  plot Green Majority” vs. “Fuel Majority
-  ```
-  ![Alt text](pics/map.png)
+  <p align="center">
+         <img src="pics/top10.png" width="45%" alt="Top 10 Countries">
+         <img src="pics/topfuel.png" width="45%" alt="Total Capacity by Fuel Source">
+     </p>
 
+
+  2. **Pie Chart** showing global renewable vs. non-renewable share.
+  <p align="center">
+         <img src="pics/pie.png" width="60%" alt="Choropleth Map">
+     </p>
+  
+  3. **Line Plots** demonstrating GDP trends over time between fuel majority countries and green energy countries.
+  <p align="center">
+         <img src="pics/10fuel.png" width="45%" alt="Top 10 Countries">
+         <img src="pics/10green.png" width="45%" alt="Total Capacity by Fuel Source">
+     </p>
+
+  4. **Choropleth Map**  Indicating “Green Majority” vs. “Fuel Majority” countries.
+  <p align="center">
+         <img src="pics/map.png" width="60%" alt="Choropleth Map">
+     </p>
 ### Next Steps
 - **Enhanced Correlation Analysis**: Investigate relationships between GDP, CO₂, and renewable share with regression or correlation tests.
 - **Improve Mapping**: Possibly create an animated map over different years if consistent time-series coverage is found.
