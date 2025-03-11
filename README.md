@@ -108,3 +108,7 @@ This week, the main objective was to perform a **multi-variable analysis** on th
 4. **Address Data Gaps**: Explore why certain columns (like population) are missing and consider alternative data sources or partial merges.
 
 By systematically adding variables and looking at multiple years/policies, we can build a more robust model and gather deeper insights for the final project.
+
+---
+### Midterm Progress:
+For my midterm project, I integrated and analyzed global power plant data alongside socioeconomic, emissions, and policy indicators to study energy use and the energy mix across countries. I merged datasets from sources like the Global Power Plant Database, World Bank, IEA, and OECD, and performed comprehensive exploratory data analysis to uncover key trends. Initial simple regressions and advanced panel data models—using both Fixed and Random Effects—revealed important differences between within-country changes and cross-country comparisons. The Hausman test indicated that time-invariant factors play a significant role, guiding my next steps to incorporate CO₂ emissions data and refine the models further. This progress lays a solid foundation for understanding the impact of renewable energy and green policies on emissions and energy use.
