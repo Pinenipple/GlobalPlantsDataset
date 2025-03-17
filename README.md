@@ -112,3 +112,87 @@ By systematically adding variables and looking at multiple years/policies, we ca
 ---
 ## Midterm Progress:
 For my midterm project, I integrated and analyzed global power plant data alongside socioeconomic, emissions, and policy indicators to study energy use and the energy mix across countries. I merged datasets from sources like the Global Power Plant Database, World Bank, IEA, and OECD, and performed comprehensive exploratory data analysis to uncover key trends. Initial simple regressions and advanced panel data models—using both Fixed and Random Effects—revealed important differences between within-country changes and cross-country comparisons. The Hausman test indicated that time-invariant factors play a significant role, guiding my next steps to incorporate CO₂ emissions data and refine the models further. This progress lays a solid foundation for understanding the impact of renewable energy and green policies on emissions and energy use.
+
+
+---
+
+# Weekly Report 10
+
+**Date:** March 15, 2025  
+
+
+
+## 1. Overview
+
+This week’s work focused on extending our analysis with two new approaches:
+- **Clustering Analysis:** Using K-Means to group countries based on their renewable capacity ratio, energy use, GDP, and environmental tax data.
+- **Geospatial Hotspot Analysis:** Creating a hexbin density map to visualize the geographic concentration of coal power plants.
+
+
+## 2. Data Integration & Code Execution
+
+- **Country-Level Data Merge:**  
+  We merged data from:
+  - **Country Capacity:** Total and renewable capacity (from `country_capacity` or computed via `power_plants`).
+  - **World Bank:** Energy use and GDP for 2005.
+  - **OECD Greengrowth:** Environmental tax indicator using the `ENVTAX` measure.
+  
+  *Note:* Standardization (lowercasing and stripping) was applied to ensure consistent country naming across datasets.
+
+- **Clustering Analysis:**  
+  - Selected key features: `renewable_ratio`, `energy_use`, `gdp`, and `env_tax`.
+  - Applied StandardScaler and ran a K-Means clustering (3 clusters as an example).
+  - Visualized the clusters using a scatter plot (Renewable Ratio vs. Energy Use).
+
+- **Geospatial Analysis:**  
+  - Loaded power plant data into a GeoDataFrame.
+  - Filtered for coal power plants (case-insensitive match).
+  - Generated a hexbin density map to highlight hotspots of coal plants globally.
+
+- **Diagnostic Check:**  
+  The output of available OECD measures (via `SELECT DISTINCT MEASURE FROM oecd_greengrowth`) confirmed that the `ENVTAX` measure is available and was used for the policy analysis.
+
+
+## 3. Key Outputs & Observations
+
+- **Clustering Output:**  
+  - Example rows from the merged data show countries like *Albania*, *Argentina*, and *Australia* with their respective capacity values, energy use, GDP, env_tax, and computed renewable ratios.
+  - *Observation:* Some countries (e.g., Albania and Argentina) appear twice with different `env_tax` values, indicating potential duplicates from the OECD dataset that may need further filtering.
+           <img src="pics/cluster.png" width="45%" >
+
+
+- **Hexbin Density Map:**  
+  - The map visualizes areas with a high concentration of coal power plants.
+  - Hotspots are visible in regions known for high coal capacity, providing a spatial complement to our country-level analysis.
+             <img src="pics/hexbin.png" width="45%" >
+
+
+- **OECD Measures:**  
+  - A diagnostic query listed all available measures.
+  - The selection of **ENVTAX** aligns with our focus on environmental taxation as a proxy for green growth policies.
+
+
+## 4. Next Steps
+
+- **Cluster Profiling:**  
+  Compute average metrics (renewable ratio, energy use, GDP, env_tax) per cluster to interpret group characteristics.
+
+- **Duplicate Resolution:**  
+  Investigate and resolve duplicate entries in the OECD data to ensure each country is uniquely represented.
+
+- **Emissions Data Integration:**  
+  Incorporate CO₂ or carbon intensity data to examine the relationship between policy indicators and emissions.
+
+- **Enhanced Spatial Analysis:**  
+  Extend the geospatial approach to include other fuel types (e.g., gas, solar, wind) and overlay policy data for richer insights.
+
+
+## 5. Conclusion
+
+This week’s analyses have added depth to our project by:
+- Uncovering natural clusters among countries using unsupervised learning.
+- Visualizing the spatial distribution of coal power plants to identify geographic hotspots.
+- Confirming data integration across multiple sources, with clear next steps to refine data quality and further link policy with energy outcomes.
+
+These efforts bring us closer to answering our project’s key questions regarding the impact of green growth policies on energy transitions and emissions.
+
