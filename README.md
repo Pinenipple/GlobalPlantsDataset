@@ -132,7 +132,7 @@ This week’s work focused on extending my analysis with two new approaches:
 ## 2. Data Integration & Code Execution
 
 - **Country-Level Data Merge:**  
-  We merged data from:
+  I merged data from:
   - **Country Capacity:** Total and renewable capacity (from `country_capacity` or computed via `power_plants`).
   - **World Bank:** Energy use and GDP for 2005.
   - **OECD Greengrowth:** Environmental tax indicator using the `ENVTAX` measure.
