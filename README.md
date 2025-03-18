@@ -124,7 +124,7 @@ For my midterm project, I integrated and analyzed global power plant data alongs
 
 ## 1. Overview
 
-This week’s work focused on extending our analysis with two new approaches:
+This week’s work focused on extending my analysis with two new approaches:
 - **Clustering Analysis:** Using K-Means to group countries based on their renewable capacity ratio, energy use, GDP, and environmental tax data.
 - **Geospatial Hotspot Analysis:** Creating a hexbin density map to visualize the geographic concentration of coal power plants.
 
@@ -164,13 +164,13 @@ This week’s work focused on extending our analysis with two new approaches:
 
 - **Hexbin Density Map:**  
   - The map visualizes areas with a high concentration of coal power plants.
-  - Hotspots are visible in regions known for high coal capacity, providing a spatial complement to our country-level analysis.
+  - Hotspots are visible in regions known for high coal capacity, providing a spatial complement to my country-level analysis.
              <img src="pics/hexbin.png" width="45%" >
 
 
 - **OECD Measures:**  
   - A diagnostic query listed all available measures.
-  - The selection of **ENVTAX** aligns with our focus on environmental taxation as a proxy for green growth policies.
+  - The selection of **ENVTAX** aligns with my focus on environmental taxation as a proxy for green growth policies.
 
 
 ## 4. Next Steps
@@ -190,10 +190,10 @@ This week’s work focused on extending our analysis with two new approaches:
 
 ## 5. Conclusion
 
-This week’s analyses have added depth to our project by:
+This week’s analyses have added depth to my project by:
 - Uncovering natural clusters among countries using unsupervised learning.
 - Visualizing the spatial distribution of coal power plants to identify geographic hotspots.
 - Confirming data integration across multiple sources, with clear next steps to refine data quality and further link policy with energy outcomes.
 
-These efforts bring us closer to answering our project’s key questions regarding the impact of green growth policies on energy transitions and emissions.
+These efforts bring us closer to answering my project’s key questions regarding the impact of green growth policies on energy transitions and emissions.
 
