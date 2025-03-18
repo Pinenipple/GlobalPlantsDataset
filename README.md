@@ -116,7 +116,7 @@ For my midterm project, I integrated and analyzed global power plant data alongs
 
 ---
 
-# Weekly Report 10
+# Weekly Report 6
 
 **Date:** March 15, 2025  
 
