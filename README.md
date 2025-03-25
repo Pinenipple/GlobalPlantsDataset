@@ -197,3 +197,47 @@ This week’s analyses have added depth to my project by:
 
 These efforts bring us closer to answering my project’s key questions regarding the impact of green growth policies on energy transitions and emissions.
 
+---
+# Weekly Report 7
+
+## 1. Overview
+This week, I focused on integrating **2015** data from multiple sources:
+- **Global Power Plant Database** for capacity (coal, solar, wind, etc.).
+- **World Bank** for GDP (current US$) and Energy Use (kg of oil eq. per capita).
+- **OECD Green Growth** for an environmental policy/expenditure measure (`EPEA_GDP`).
+
+By aligning everything to 2015, I ensured all datasets had sufficient coverage.
+
+## 2. Data Processing & Merging
+1. **OECD Data**: Queried `EPEA_GDP` from `oecd_greengrowth`, grouped duplicates by `(country, year)`, took the median, and filtered for 2015.
+2. **World Bank**: Extracted `"2015 [YR2015]"` columns for GDP and Energy Use. 
+3. **Capacity Table**: Computed `renewable_ratio = total_renewable_capacity / total_capacity` for each country.
+4. **Merging**: Merged on `country` (inner joins for World Bank + capacity, then left join with OECD so that missing countries get `env_policy_2015 = 0`).
+
+## 3. Clustering Analysis
+- **Features**: `renewable_ratio`, `energy_use_2015`, `gdp_2015`, `env_policy_2015`.
+- **Method**: Standardized features, ran K-Means with `n_clusters=3`.
+- **Results**:
+  - **Cluster 0**: Mid-level GDP, moderate renewables, moderate energy use, highest environment policy measure.
+  - **Cluster 1**: Very high renewables, high energy use, moderate GDP, moderate environment policy.
+  - **Cluster 2**: Highest GDP, lower renewables, moderate energy use, lowest environment policy.
+
+These findings suggest different development pathways and policy priorities among the clusters.
+
+## 4. Geospatial Analysis
+- Generated **density maps** for coal, solar, and wind power plants using Plotly Express. 
+- Observed typical hotspots (e.g., coal in Asia, solar in sun-rich regions, wind in coastal areas).
+
+## 5. Observations
+- **Policy Variation**: The `EPEA_GDP` measure provided a non-zero range of values in 2015, enabling a meaningful cluster dimension.
+- **Year Choice**: Using 2015 overcame the lack of data in earlier years (e.g., 2005). 
+- **Interpretation**: Clusters with higher renewables or higher environment policy scores do not always have the largest GDP or the highest energy consumption—pointing to diverse national contexts.
+
+## 6. Next Steps
+1. **Try Other Years**: If other years (2016, 2017) also have matching data, repeat the analysis to see if the clusters change over time.
+2. **Expand Variables**: Incorporate CO₂ emissions or additional policy measures to refine the cluster characterization.
+3. **Panel Data Approach**: If consistent data is available across multiple years, consider a panel regression or multi-year clustering to capture trends over time.
+4. **Improve Visualization**: Add interactivity or overlays on the density maps to compare policy intensity and plant distribution on the same map.
+
+## 7. Conclusion
+Aligning the datasets on 2015 allowed for a robust cluster analysis and meaningful policy insights. The geospatial maps highlight fuel-specific hotspots worldwide. Future work will expand the time dimension and explore additional policy or emissions metrics for a more comprehensive picture of global energy transitions.
