@@ -248,11 +248,10 @@ Aligning the datasets on 2015 allowed for a robust cluster analysis and meaningf
 # Weekly Report: 8
 
 ## Overview
-This week, significant progress was made on our semester-long project that examines the relationship between renewable capacity, CO₂ emissions, and policy measures. We integrated multiple datasets (Global Power Plant DB, World Bank, OECD, and IEA) and developed both cross-sectional and longitudinal analyses to address our research questions.
-
+This week, significant progress was made on my semester-long project that examines the relationship between renewable capacity, CO₂ emissions, and policy measures. I integrated multiple datasets (Global Power Plant DB, World Bank, OECD, and IEA) and developed both cross-sectional and longitudinal analyses to address the research questions.
 
 ### Data Preprocessing & Integration
-- **Standardized country names** across all datasets (converted to lowercase and trimmed spaces).
+- **Standardized country names** across all datasets by converting them to lowercase and trimming spaces.
 - **Merged datasets** using a common "country" field, combining power plant capacity, CO₂ emissions, GDP, and environmental policy (ENVTAX) data.
 - **Handled missing values and outliers** by identifying problematic entries (e.g., negative CO₂ readings, extreme capacity figures) and removing them to ensure a clean dataset.
 
@@ -261,12 +260,8 @@ This week, significant progress was made on our semester-long project that exami
 - Generated **scatter plots with fitted regression lines** to analyze the relationship between the renewable capacity ratio and CO₂ emissions.
 - Applied **K-Means clustering** to group countries based on renewable capacity ratio, GDP, emissions, and policy measures, revealing distinct energy–economy–policy profiles.
 
-
 ## Key Findings
-- **Single-Year Analysis:** The relationship between renewable capacity and CO₂ emissions is weak when viewed in isolation, indicating that renewable capacity alone does not guarantee lower emissions.
-
+The single-year analysis indicates that the relationship between renewable capacity and CO₂ emissions is weak when viewed in isolation, suggesting that renewable capacity alone does not guarantee lower emissions.
 
 ## Next Steps
--  Time-Series (Panel) Analysis
-
-
+I will proceed with the **Time-Series (Panel) Analysis** to investigate how CO₂ emissions, GDP, and environmental policy measures change over time, and to determine whether stronger policies or higher GDP levels are associated with lower emissions.
