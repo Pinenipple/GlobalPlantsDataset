@@ -241,3 +241,32 @@ These findings suggest different development pathways and policy priorities amon
 
 ## 7. Conclusion
 Aligning the datasets on 2015 allowed for a robust cluster analysis and meaningful policy insights. The geospatial maps highlight fuel-specific hotspots worldwide. Future work will expand the time dimension and explore additional policy or emissions metrics for a more comprehensive picture of global energy transitions.
+
+
+---
+
+# Weekly Report: 8
+
+## Overview
+This week, significant progress was made on our semester-long project that examines the relationship between renewable capacity, CO₂ emissions, and policy measures. We integrated multiple datasets (Global Power Plant DB, World Bank, OECD, and IEA) and developed both cross-sectional and longitudinal analyses to address our research questions.
+
+
+### Data Preprocessing & Integration
+- **Standardized country names** across all datasets (converted to lowercase and trimmed spaces).
+- **Merged datasets** using a common "country" field, combining power plant capacity, CO₂ emissions, GDP, and environmental policy (ENVTAX) data.
+- **Handled missing values and outliers** by identifying problematic entries (e.g., negative CO₂ readings, extreme capacity figures) and removing them to ensure a clean dataset.
+
+### Single-Year Analysis
+- Selected **2014** as the representative year.
+- Generated **scatter plots with fitted regression lines** to analyze the relationship between the renewable capacity ratio and CO₂ emissions.
+- Applied **K-Means clustering** to group countries based on renewable capacity ratio, GDP, emissions, and policy measures, revealing distinct energy–economy–policy profiles.
+
+
+## Key Findings
+- **Single-Year Analysis:** The relationship between renewable capacity and CO₂ emissions is weak when viewed in isolation, indicating that renewable capacity alone does not guarantee lower emissions.
+
+
+## Next Steps
+-  Time-Series (Panel) Analysis
+
+
