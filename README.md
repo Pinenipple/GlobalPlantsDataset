@@ -265,3 +265,32 @@ The single-year analysis indicates that the relationship between renewable capac
 
 ## Next Steps
 I will proceed with the **Time-Series (Panel) Analysis** to investigate how CO₂ emissions, GDP, and environmental policy measures change over time, and to determine whether stronger policies or higher GDP levels are associated with lower emissions.
+
+---
+
+# Weekly Report: 9
+
+## Overview
+This week, I focused on advancing the time series analysis and improving the quality of the visualizations. The work concentrated on refining the multi-year panel analysis (2010–2020) and enhancing the clarity and aesthetics of various graphs. In addition, preparations began for the upcoming oral presentation and written report to be hosted on GitHub.
+
+## Tasks Completed
+
+### Time Series Analysis
+- Extended and refined the multi-year panel dataset (2010–2020) to ensure data consistency.
+- Revised the two-way fixed effects regression model by addressing multicollinearity and performing diagnostic checks.
+- Analyzed trends in average CO₂ emissions over time, confirming that while significant relationships exist, the overall explanatory power remains modest.
+
+### Graph Quality Improvements
+- Enhanced time series plots by optimizing figure sizes, font settings, and axis labels; grid lines were added for better readability.
+- Applied smoothing techniques to the CO₂ emissions trend line to better capture gradual changes.
+- Improved clustering scatter plots by fine-tuning color schemes and legends to more clearly distinguish country clusters.
+- Added error bars/confidence intervals to regression plots to visually represent model uncertainty.
+
+## Key Findings
+- The refined panel analysis shows statistically significant effects; however, GDP and policy measures explain only a small portion of the variation in CO₂ emissions (within R² around 1–2%).
+- Enhanced visualizations now clearly depict the upward trend in CO₂ emissions until about 2018, followed by a notable decline, and display distinct country clusters based on renewable capacity and other indicators.
+
+## Next Steps
+- Prepare the oral presentation and written report to be published on GitHub, incorporating feedback and finalizing the narrative.
+- Further refine graphical presentations based on peer and instructor feedback.
+
